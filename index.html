@@ -242,13 +242,13 @@ renderEvent=function(){
  const e=activeEvent(),area=$('eventArea');
  if(!e){$('eventSummary').textContent='Noch kein Spieltag ausgewählt.';area.innerHTML='<div class="empty">Noch kein Spieltag vorhanden.</div>';return}
  $('eventSummary').textContent=`${fmtD(e.date)} · ${e.playerIds.length} Teilnehmer`;
- const elo=automaticEloStats(e.id),h2h={};
+ const elo=automaticEloStats(e.id),h2h={},cs=activeSeason(),prior={...cs,events:(cs?.events||[]).filter(x=>x.id!==e.id)},ov=rankMap(seasonRankList(prior,'overall').filter(x=>x.played>0)),qu=rankMap(seasonRankList(prior,'qualified').filter(x=>x.played>0));
  seasons.forEach(s=>s.events.forEach(ev=>matchesForEvent(ev).forEach(m=>{if(!m.winner||m.status==='notPlayed')return;const k=m.a<m.b?m.a+'|'+m.b:m.b+'|'+m.a;h2h[k]=h2h[k]||{};h2h[k][m.winner]=(h2h[k][m.winner]||0)+1})));
  const line=m=>{const A=getPlayer(m.a),B=getPlayer(m.b),k=m.a<m.b?m.a+'|'+m.b:m.b+'|'+m.a,hh=h2h[k]||{};let wa=hh[m.a]||0,wb=hh[m.b]||0;
   if(m.winner===m.a)wa--;else if(m.winner===m.b)wb--;
   const np=m.status==='notPlayed',has=Number.isInteger(m.legsA)&&Number.isInteger(m.legsB);
   const res=np?'nicht gespielt':has?`${m.legsA} : ${m.legsB}`:(m.winner?'✓':'offen');
-  return `<div class="cm"><div class="cm-top"><span class="cm-names"><span class="${m.winner===m.a?'w':''}">${escapeHtml(A.name)}</span> – <span class="${m.winner===m.b?'w':''}">${escapeHtml(B.name)}</span></span><strong class="cm-res ${(!has&&!m.winner)||np?'o':''}">${res}</strong></div><div class="cm-info">ELO ${Math.round(elo[m.a]?.rating||1500)} | ${Math.round(elo[m.b]?.rating||1500)} · bisher direkt ${wa}:${wb}</div></div>`};
+  return `<div class="cm"><div class="cm-top"><span class="cm-names"><span class="${m.winner===m.a?'w':''}">${escapeHtml(A.name)}</span> – <span class="${m.winner===m.b?'w':''}">${escapeHtml(B.name)}</span></span><strong class="cm-res ${(!has&&!m.winner)||np?'o':''}">${res}</strong></div><div class="cm-info">ELO ${Math.round(elo[m.a]?.rating||1500)} | ${Math.round(elo[m.b]?.rating||1500)} · bisher direkt ${wa}:${wb}</div><div class="cm-info">Platz Gesamt ${ov[m.a]||'–'} | ${ov[m.b]||'–'} · Quali ${qu[m.a]||'–'} | ${qu[m.b]||'–'}</div></div>`};
  let html='';
  if(e.mode==='history'){const ms=e.matches||[];html=`<div class="cm-round"><span>Spiele</span><span>${ms.filter(m=>m.winner).length} Ergebnisse</span></div>`+(ms.map(line).join('')||'<div class="empty">Noch keine Spiele.</div>')}
  else html=(e.rounds||[]).map(r=>`<div class="cm-round"><span>Runde ${r.number}</span><span>${r.matches.filter(m=>m.winner).length}/${r.matches.length} Ergebnisse</span></div>${r.matches.map(line).join('')}${r.bye?`<div class="cm-bye">⏸ Spielfrei: <strong>${escapeHtml(getPlayer(r.bye).name)}</strong></div>`:''}`).join('');
