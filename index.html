@@ -19,6 +19,14 @@ body.viewer #eventArea :is(button,select,input,.legs-entry,.pair-edit,.match-act
 #nav::-webkit-scrollbar{display:none}
 #nav a{flex:0 0 auto;padding:8px 13px;border-radius:99px;text-decoration:none;color:#172033;font-weight:650;font-size:.9rem;white-space:nowrap}
 #nav a.on{background:#182235;color:#fff}
+.cm{padding:7px 0;border-bottom:1px solid #eef1f5}.cm:last-child{border-bottom:0}
+.cm-top{display:flex;justify-content:space-between;gap:10px;font-size:.95rem}
+.cm-names .w{font-weight:800}.cm-res{font-variant-numeric:tabular-nums;white-space:nowrap}.cm-res.o{color:#94a3b8;font-weight:600;font-size:.82rem}
+.cm-info{color:#64748b;font-size:.76rem;margin-top:1px}
+.cm-round{display:flex;justify-content:space-between;font-size:.8rem;font-weight:700;color:#475569;margin:14px 0 2px;text-transform:uppercase;letter-spacing:.03em}.cm-round:first-child{margin-top:0}
+.cm-bye{font-size:.82rem;color:#64748b;padding:6px 0}
+body.viewer #eventArea .day-summary .results-list,body.viewer #eventArea .day-summary>h3:first-child{display:none}
+body.viewer #eventArea .day-summary{margin-top:14px}
 .pg-hide{display:none!important}
 main>*{min-width:0;max-width:100%}html,body{overflow-x:hidden}
 .tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -228,7 +236,26 @@ function renderPlayerPage(){const chips=$('playerChips');if(!chips)return;const 
  <h3>ELO-Verlauf</h3>${eloChart(eloTimeline()[pid]||[])}
  <h3 style="margin-top:16px">Saisons</h3><div class="table-wrap"><table><thead><tr><th>Saison</th><th>Platz</th><th>Spiele</th><th>S</th><th>N</th><th>Pkt/Spiel</th></tr></thead><tbody>${srows.map(o=>`<tr><td>${escapeHtml(o.s.name)}</td><td>${o.i+1}/${o.n}</td><td>${o.x.played}</td><td>${o.x.wins}</td><td>${o.x.losses}</td><td><strong>${o.x.rate.toFixed(2)}</strong></td></tr>`).join('')}</tbody></table></div>
  <h3 style="margin-top:16px">Letzte Spiele</h3><div class="table-wrap"><table><thead><tr><th>Datum</th><th>Gegner</th><th>Legs</th><th></th></tr></thead><tbody>${rev.slice(0,10).map(g=>`<tr><td>${fmtD(g.date)}</td><td><a href="#spieler-${g.opp}">${escapeHtml(getPlayer(g.opp).name)}</a></td><td>${Number.isInteger(g.lf)&&Number.isInteger(g.la)?g.lf+' : '+g.la:'–'}</td><td class="${g.won?'win':'loss'}">${g.won?'S':'N'}</td></tr>`).join('')}</tbody></table></div>`}
+const __renderEventOrig=renderEvent;
+renderEvent=function(){
+ if(!document.body.classList.contains('viewer'))return __renderEventOrig();
+ const e=activeEvent(),area=$('eventArea');
+ if(!e){$('eventSummary').textContent='Noch kein Spieltag ausgewählt.';area.innerHTML='<div class="empty">Noch kein Spieltag vorhanden.</div>';return}
+ $('eventSummary').textContent=`${fmtD(e.date)} · ${e.playerIds.length} Teilnehmer`;
+ const elo=automaticEloStats(e.id),h2h={};
+ seasons.forEach(s=>s.events.forEach(ev=>matchesForEvent(ev).forEach(m=>{if(!m.winner||m.status==='notPlayed')return;const k=m.a<m.b?m.a+'|'+m.b:m.b+'|'+m.a;h2h[k]=h2h[k]||{};h2h[k][m.winner]=(h2h[k][m.winner]||0)+1})));
+ const line=m=>{const A=getPlayer(m.a),B=getPlayer(m.b),k=m.a<m.b?m.a+'|'+m.b:m.b+'|'+m.a,hh=h2h[k]||{};let wa=hh[m.a]||0,wb=hh[m.b]||0;
+  if(m.winner===m.a)wa--;else if(m.winner===m.b)wb--;
+  const np=m.status==='notPlayed',has=Number.isInteger(m.legsA)&&Number.isInteger(m.legsB);
+  const res=np?'nicht gespielt':has?`${m.legsA} : ${m.legsB}`:(m.winner?'✓':'offen');
+  return `<div class="cm"><div class="cm-top"><span class="cm-names"><span class="${m.winner===m.a?'w':''}">${escapeHtml(A.name)}</span> – <span class="${m.winner===m.b?'w':''}">${escapeHtml(B.name)}</span></span><strong class="cm-res ${(!has&&!m.winner)||np?'o':''}">${res}</strong></div><div class="cm-info">ELO ${Math.round(elo[m.a]?.rating||1500)} | ${Math.round(elo[m.b]?.rating||1500)} · bisher direkt ${wa}:${wb}</div></div>`};
+ let html='';
+ if(e.mode==='history'){const ms=e.matches||[];html=`<div class="cm-round"><span>Spiele</span><span>${ms.filter(m=>m.winner).length} Ergebnisse</span></div>`+(ms.map(line).join('')||'<div class="empty">Noch keine Spiele.</div>')}
+ else html=(e.rounds||[]).map(r=>`<div class="cm-round"><span>Runde ${r.number}</span><span>${r.matches.filter(m=>m.winner).length}/${r.matches.length} Ergebnisse</span></div>${r.matches.map(line).join('')}${r.bye?`<div class="cm-bye">⏸ Spielfrei: <strong>${escapeHtml(getPlayer(r.bye).name)}</strong></div>`:''}`).join('');
+ area.innerHTML=html+renderDaySummary(e);
+};
 window.__extra=()=>{applyPage();renderHome();renderPlayerPage()};
+renderEvent();
 window.addEventListener('hashchange',()=>{window.__extra();window.scrollTo(0,0)});
 window.__extra();
 </script>
