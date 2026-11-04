@@ -70,12 +70,14 @@ body.viewer .section-toggle,body.viewer .section-collapsed-note{display:none!imp
 table .form-dots i{width:10px;height:10px}.form-dots{gap:3px}
 .cm-res.o{color:#7d8798}
 .top3grid .prim{border:1px solid #7a1f2b;border-radius:10px;padding:8px 12px;background:#1d1014}
+.quick{cursor:pointer;border-color:#7a1f2b;background:#1a1216}.quick:hover{border-color:#d4122e}.quick-link{margin:10px 0 0;color:#ff6b7a;font-weight:700}#homeQuick .section-toggle{display:none!important}
 table.tc{font-size:.8rem}table.tc th,table.tc td{padding:8px 3px}table.tc .form-dots i{width:8px;height:8px}
 </style></head><body class="viewer">
 <header><h1 style="cursor:pointer" onclick="location.hash='#home'">ΒΔΞ-Darts</h1><p>Saisonhistorie · Ranglisten · automatische ELO</p><div id="cloudBar"><span id="cloudStatus">Verbinde…</span><span id="cloudUpdated"></span><button id="loginBtn" type="button">Admin-Login</button></div></header>
 <nav id="nav"><a data-nav="home" href="#home">🏠 Start</a><a data-nav="saison" href="#saison">📊 Saison</a><a data-nav="elo" href="#elo">⚡ ELO</a><a data-nav="ewig" href="#ewig">♾️ Ewige Tabelle</a><a data-nav="spieler" href="#spieler">👤 Spieler</a><a data-nav="hall" href="#hall">🏅 Hall of Fame</a><a data-nav="historie" href="#historie">🗂️ Historie</a><a data-nav="verwaltung" class="admin-only" href="#verwaltung">⚙️ Verwaltung</a></nav>
 <main>
 <div class="tiles" data-page="home"><a class="tile" href="#saison"><div class="ic">📊</div><b>Saison</b><span>Aktuelle Tabellen &amp; Spieltag</span></a><a class="tile" href="#elo"><div class="ic">⚡</div><b>ELO-Rangliste</b><span>Wer ist in Form?</span></a><a class="tile" href="#ewig"><div class="ic">♾️</div><b>Ewige Tabelle</b><span>Alle Saisons zusammen</span></a><a class="tile" href="#spieler"><div class="ic">👤</div><b>Spielerprofile</b><span>Bilanz, ELO-Verlauf, Duelle</span></a><a class="tile" href="#hall"><div class="ic">🏅</div><b>Hall of Fame</b><span>Meister &amp; Rekorde</span></a><a class="tile" href="#historie"><div class="ic">🗂️</div><b>Historie</b><span>Vergangene Saisons &amp; Spieltage</span></a><a class="tile admin-only" href="#verwaltung"><div class="ic">⚙️</div><b>Verwaltung</b><span>Spieler &amp; Spieltag anlegen</span></a></div>
+<section class="card quick" data-page="home" id="homeQuick" hidden><h2 id="homeQuickTitle">Kurzübersicht</h2><div id="homeQuickBody"></div><p class="quick-link">Zum laufenden Spieltag →</p></section>
 <section class="card" data-page="home"><h2 id="homeLiveTitle">Spieltag</h2><div id="homeLive"></div></section>
 <section class="card" data-page="home"><h2 id="homeTopTitle">Top 3</h2><div id="homeTop3"></div></section>
 <section class="card" data-page="home"><h2>🏆 Bisherige Meister</h2><div id="homeChamps"></div></section>
@@ -283,7 +285,7 @@ function eloChart(tl){const pts=[{date:'',rating:1500},...tl];if(pts.length<2)re
  const poly=pts.map((p,i)=>x(i).toFixed(1)+','+y(p.rating).toFixed(1)).join(' ');
  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block"><line x1="${P}" x2="${W-P}" y1="${y(1500)}" y2="${y(1500)}" stroke="#7d8798" stroke-dasharray="4 4"/><text x="${W-P}" y="${y(1500)-4}" font-size="9" fill="#98a1b2" text-anchor="end">1500</text><polyline fill="none" stroke="#ff3b4f" stroke-width="2.5" stroke-linejoin="round" points="${poly}"/>${pts.map((p,i)=>`<circle cx="${x(i).toFixed(1)}" cy="${y(p.rating).toFixed(1)}" r="3" fill="#ff3b4f"/>`).join('')}<text x="${P}" y="${H-6}" font-size="9" fill="#98a1b2">Start</text><text x="${W-P}" y="${H-6}" font-size="9" fill="#98a1b2" text-anchor="end">${fmtD(pts.at(-1).date)}</text><text x="${x(pts.length-1)}" y="${y(pts.at(-1).rating)-8}" font-size="11" font-weight="700" fill="#ebedf1" text-anchor="end">${Math.round(pts.at(-1).rating)}</text></svg>`}
 
-function compactEventHTML(e,s,info,lastOnly){
+function compactEventHTML(e,s,info,lastOnly,nums,labels){
  let elo=null,h2h={},ov={},qu={};
  if(info){elo=automaticEloStats(e.id);
   seasons.forEach(x=>x.events.forEach(ev=>matchesForEvent(ev).forEach(m=>{if(!m.winner||m.status==='notPlayed')return;const k=m.a<m.b?m.a+'|'+m.b:m.b+'|'+m.a;h2h[k]=h2h[k]||{};h2h[k][m.winner]=(h2h[k][m.winner]||0)+1})));
@@ -294,8 +296,8 @@ function compactEventHTML(e,s,info,lastOnly){
   const np=m.status==='notPlayed',has=Number.isInteger(m.legsA)&&Number.isInteger(m.legsB),res=np?'nicht gespielt':has?`${m.legsA} : ${m.legsB}`:(m.winner?'✓':'offen');
   return `<div class="cm"><div class="cm-top"><span class="cm-names"><span class="${m.winner===m.a?'w':''}">${escapeHtml(getPlayer(m.a).name)}</span> – <span class="${m.winner===m.b?'w':''}">${escapeHtml(getPlayer(m.b).name)}</span></span><strong class="cm-res ${(!has&&!m.winner)||np?'o':''}">${res}</strong></div>${showInfo?`<div class="cm-info">ELO ${Math.round(elo[m.a]?.rating||1500)} | ${Math.round(elo[m.b]?.rating||1500)} · bisher direkt ${wa}:${wb}</div><div class="cm-info">Platz Quali ${qu[m.a]||'–'} | ${qu[m.b]||'–'} · Gesamt ${ov[m.a]||'–'} | ${ov[m.b]||'–'}</div>`:''}</div>`};
  if(!rounds){const ms=e.matches||[];return `<div class="cm-round"><span>Spiele</span><span>${ms.filter(m=>m.winner).length} Ergebnisse</span></div>`+(ms.map(m=>line(m,null)).join('')||'<div class="empty">Noch keine Spiele.</div>')}
- const rs=lastOnly&&lastR?[lastR]:rounds;
- return rs.map(r=>`<div class="cm-round"><span>Runde ${r.number}</span><span>${r.matches.filter(m=>m.winner).length}/${r.matches.length} Ergebnisse</span></div>${r.matches.map(m=>line(m,r.number)).join('')}${r.bye&&e.finished===false?`<div class="cm-bye">⏸ Spielfrei: <strong>${escapeHtml(getPlayer(r.bye).name)}</strong></div>`:''}`).join('')||'<div class="empty">Noch keine Runden.</div>'}
+ const rs=nums?nums.map(n=>rounds.find(r=>r.number===n)).filter(Boolean):(lastOnly&&lastR?[lastR]:rounds);
+ return rs.map(r=>`<div class="cm-round"><span>${labels&&labels[r.number]?labels[r.number]:'Runde '+r.number}</span><span>${r.matches.filter(m=>m.winner).length}/${r.matches.length} Ergebnisse</span></div>${r.matches.map(m=>line(m,r.number)).join('')}${r.bye&&e.finished===false?`<div class="cm-bye">⏸ Spielfrei: <strong>${escapeHtml(getPlayer(r.bye).name)}</strong></div>`:''}`).join('')||'<div class="empty">Noch keine Runden.</div>'}
 function seasonTableHTML(s,type){const list=seasonRankList(s,type).filter(x=>x.played>0);if(!list.length)return '<div class="empty">Noch keine Ergebnisse.</div>';
  return `<div class="table-wrap"><table class="tc"><thead><tr><th>#</th><th>Spieler</th><th>Form</th><th>Sp</th><th>S</th><th>N</th><th>LegDif</th><th>Pkt/Sp</th></tr></thead><tbody>${list.map((x,i)=>{const ld=x.legsFor-x.legsAgainst;return `<tr><td>${i+1}</td><td>${pLink(x.player.id)}${i===0&&s.ended?' 🏆':''}</td><td>${formDots(x.player.id,s)}</td><td>${x.played}</td><td>${x.wins}</td><td>${x.losses}</td><td>${ld>0?'+':''}${ld}</td><td><strong>${x.rate.toFixed(2)}</strong></td></tr>`}).join('')}</tbody></table></div>`}
 const top3HTML=(rows,val)=>rows.length?`<ol class="top3">${rows.map((x,i)=>`<li><span class="medal">${MEDAL[i]}</span><span class="nm">${pLink(x.player.id)}</span><span class="val">${val(x)}</span></li>`).join('')}</ol>`:'<div class="muted small">noch keine Wertung</div>';
@@ -305,7 +307,7 @@ function renderHome(){
  const t=$('homeLiveTitle'),box=$('homeLive');
  if(!e){t.textContent='Spieltag';box.innerHTML='<div class="empty">Noch kein Spieltag erfasst.</div>'}
  else{const live=e.finished===false;t.innerHTML=`${live?'Laufender Spieltag':'Letzter Spieltag'} · ${fmtD(e.date)} ${eBadge(e)}`;
-  box.innerHTML=`<p class="muted" style="margin-top:0">${escapeHtml(es.name)} · ${e.playerIds.length} Teilnehmer</p>`+(live&&e.mode==='live'?'<h3>Aktuelle Runde</h3>'+compactEventHTML(e,es,true,true):'')+renderDaySummary(e)+`<p style="margin:10px 0 0"><a href="${es===cs?'#saison':'#historie'}">Alle Runden &amp; Ergebnisse →</a></p>`}
+  box.innerHTML=`<p class="muted" style="margin-top:0">${escapeHtml(es.name)} · ${e.playerIds.length} Teilnehmer</p>`+renderDaySummary(e)+(live?'':`<p style="margin:10px 0 0"><a href="${es===cs?'#saison':'#historie'}">Alle Runden &amp; Ergebnisse →</a></p>`)}
  $('homeTopTitle').innerHTML='Top 3 · '+(cs?escapeHtml(cs.name)+' '+sBadge(cs):'Saison');
  $('homeTop3').innerHTML=cs?`<div class="top3grid"><div class="prim"><h3>Qualifikation ★</h3>${top3HTML(topList(cs,'qualified',3),x=>x.rate.toFixed(2)+' Pkt/Sp')}</div><div><h3>Gesamt</h3>${top3HTML(topList(cs,'overall',3),x=>x.rate.toFixed(2)+' Pkt/Sp')}</div><div><h3>ELO</h3>${top3HTML(eloRankList().filter(x=>x.played>0).slice(0,3),x=>Math.round(x.rating))}</div></div>`:'';
  const ended=seasons.filter(s=>s.ended);
@@ -383,7 +385,16 @@ function updateFirstBye(){const wrap=$('firstByeWrap');if(!wrap)return;const ids
  const ranked=rankIds(ids,Object.fromEntries(ids.map(id=>[id,{wins:0}]))),auto=ranked[Math.floor(ranked.length/2)];
  sel.innerHTML=`<option value="">Automatisch (System: ${escapeHtml(getPlayer(auto).name)})</option>`+[...ids].sort((a,b)=>getPlayer(a).name.localeCompare(getPlayer(b).name)).map(id=>`<option value="${id}">${escapeHtml(getPlayer(id).name)}</option>`).join('');sel.value=ids.includes(cur)?cur:''}
 $('eventMode').addEventListener('change',updateFirstBye);
-window.__extra=()=>{applyPage();updateFirstBye();const cs=activeSeason();$('tablesH').innerHTML='Saisonrangliste'+(cs?' · '+escapeHtml(cs.name)+' '+sBadge(cs):'');renderHome();renderPlayerPage();renderHall();renderHistorie()};
+function renderQuick(){const box=$('homeQuick');if(!box)return;const cs=currentSeason(),e=currentEvent(cs);
+ if(!e||e.finished!==false||e.mode!=='live'||!(e.rounds||[]).length){box.hidden=true;return}
+ const rs=e.rounds,last=rs.at(-1),open=last.matches.some(m=>!m.winner&&m.status!=='notPlayed'),labels={};let nums;
+ if(open){labels[last.number]='Laufende Runde '+last.number;nums=[last.number];if(rs.length>1){const pr=rs.at(-2);labels[pr.number]='Letzte Runde '+pr.number;nums.push(pr.number)}}
+ else{labels[last.number]='Letzte Runde '+last.number;nums=[last.number]}
+ $('homeQuickTitle').innerHTML='Kurzübersicht · Spieltag '+fmtD(e.date)+' '+eBadge(e);
+ $('homeQuickBody').innerHTML=compactEventHTML(e,cs,false,false,nums,labels)+(open?'':'<div class="cm-bye">Die nächste Runde wird gerade erstellt.</div>');
+ box.hidden=false}
+$('homeQuick').addEventListener('click',ev=>{if(ev.target.closest('button'))return;const cs=currentSeason(),e=currentEvent(cs);if(cs&&e){activeSeasonId=cs.id;selectedEventId=e.id}location.hash='#saison';renderAll()});
+window.__extra=()=>{applyPage();updateFirstBye();renderQuick();const cs=activeSeason();$('tablesH').innerHTML='Saisonrangliste'+(cs?' · '+escapeHtml(cs.name)+' '+sBadge(cs):'');renderHome();renderPlayerPage();renderHall();renderHistorie()};
 window.addEventListener('hashchange',()=>{window.__extra();window.scrollTo(0,0)});
 renderAll();
 </script>

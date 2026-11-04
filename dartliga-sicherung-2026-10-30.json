@@ -1,0 +1,2003 @@
+{
+  "players": [
+    {
+      "id": "p4",
+      "name": "Daniel",
+      "elo": 1500
+    },
+    {
+      "id": "p2",
+      "name": "Fabian",
+      "elo": 1500
+    },
+    {
+      "id": "p1",
+      "name": "Florin",
+      "elo": 1500
+    },
+    {
+      "id": "p5",
+      "name": "Hansi",
+      "elo": 1500
+    },
+    {
+      "id": "p10",
+      "name": "Jonas",
+      "elo": 1500
+    },
+    {
+      "id": "p9",
+      "name": "Kassi",
+      "elo": 1500
+    },
+    {
+      "id": "p7",
+      "name": "Kevin",
+      "elo": 1500
+    },
+    {
+      "id": "p8",
+      "name": "Lasse",
+      "elo": 1500
+    },
+    {
+      "id": "p6",
+      "name": "Markus",
+      "elo": 1500
+    },
+    {
+      "id": "p0",
+      "name": "Max",
+      "elo": 1500
+    },
+    {
+      "id": "p3",
+      "name": "Michi",
+      "elo": 1500
+    }
+  ],
+  "selectedIds": [
+    "p4",
+    "p1",
+    "p6",
+    "p0",
+    "p3"
+  ],
+  "seasons": [
+    {
+      "id": "seaoke3lk",
+      "name": "Saison 2",
+      "events": [
+        {
+          "id": "eik0zlbmo",
+          "date": "2026-08-25",
+          "playerIds": [
+            "p1",
+            "p10",
+            "p9",
+            "p8",
+            "p3"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "mgxx1rgz0",
+              "a": "p10",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "mjs4tnil6",
+              "a": "p8",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p8"
+            },
+            {
+              "id": "myz2ze0pb",
+              "a": "p10",
+              "b": "p9",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "my67n8iym",
+              "a": "p3",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "m8iozc5p5",
+              "a": "p8",
+              "b": "p9",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p8"
+            },
+            {
+              "id": "mamga82vc",
+              "a": "p10",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "m87ji7ycl",
+              "a": "p3",
+              "b": "p8",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "m05vsqk3i",
+              "a": "p1",
+              "b": "p9",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "moukryxlq",
+              "a": "p10",
+              "b": "p8",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "m4shkygbv",
+              "a": "p3",
+              "b": "p9",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            }
+          ]
+        },
+        {
+          "id": "e8dfcsvsk",
+          "date": "2026-09-28",
+          "playerIds": [
+            "p4",
+            "p5",
+            "p10",
+            "p0",
+            "p3"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "m8adsrbc4",
+              "a": "p0",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "m070fmxd3",
+              "a": "p10",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "mqbtx916k",
+              "a": "p3",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "msfuuo534",
+              "a": "p3",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "m507kt6yr",
+              "a": "p10",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "m6t124zkt",
+              "a": "p5",
+              "b": "p4",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p5"
+            },
+            {
+              "id": "mh3ref3oe",
+              "a": "p3",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "m48ppdt3q",
+              "a": "p0",
+              "b": "p4",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "mx6dljolp",
+              "a": "p10",
+              "b": "p4",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "m59yrkv4t",
+              "a": "p4",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p4"
+            }
+          ]
+        },
+        {
+          "id": "eiwpr498l",
+          "date": "2026-10-07",
+          "playerIds": [
+            "p4",
+            "p2",
+            "p5",
+            "p10",
+            "p6",
+            "p0",
+            "p3"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "mvlrajbxv",
+              "a": "p3",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "mv7ahu2va",
+              "a": "p6",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "m2ug4mfs4",
+              "a": "p4",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "m5e03pkue",
+              "a": "p10",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "myghvfeie",
+              "a": "p0",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mgcvuicsy",
+              "a": "p4",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p4"
+            },
+            {
+              "id": "m9ertl7g3",
+              "a": "p3",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "msax0whn4",
+              "a": "p10",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "mlj3qtqsc",
+              "a": "p4",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p4"
+            },
+            {
+              "id": "m59uq9463",
+              "a": "p3",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "mq0qbpd0s",
+              "a": "p4",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "m0nsy8tqx",
+              "a": "p10",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "m0n1kbpg4",
+              "a": "p4",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p4"
+            },
+            {
+              "id": "mr64j49b9",
+              "a": "p5",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p5"
+            },
+            {
+              "id": "m1jgz1fvc",
+              "a": "p0",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "mctper6ds",
+              "a": "p3",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "m7xd5k5zk",
+              "a": "p0",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mhe5fvmm4",
+              "a": "p6",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p6"
+            },
+            {
+              "id": "m1rd3a030",
+              "a": "p0",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mn1kd95yn",
+              "a": "p4",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p4"
+            },
+            {
+              "id": "mbp36qstl",
+              "a": "p6",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            }
+          ]
+        },
+        {
+          "id": "eweu2yikb",
+          "date": "2026-10-12",
+          "playerIds": [
+            "p4",
+            "p10",
+            "p6",
+            "p0",
+            "p3"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "mqu6wxyae",
+              "a": "p0",
+              "b": "p4",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "mj56jlz0l",
+              "a": "p6",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "mjo9418sd",
+              "a": "p4",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p4"
+            },
+            {
+              "id": "mu4js9epk",
+              "a": "p0",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "m85espms8",
+              "a": "p10",
+              "b": "p4",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "m41x1a453",
+              "a": "p6",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p6"
+            },
+            {
+              "id": "m0dr3rwvl",
+              "a": "p6",
+              "b": "p4",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "my56mp0fl",
+              "a": "p0",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "manenoba1",
+              "a": "p3",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "m638m9gbz",
+              "a": "p6",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "m173x4rsa",
+              "a": "p4",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mtd6xksig",
+              "a": "p10",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "meka2cfqn",
+              "a": "p4",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mbzkcjtsq",
+              "a": "p0",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "mtfsq2kfo",
+              "a": "p3",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "mitulgwcc",
+              "a": "p4",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mdl501499",
+              "a": "p0",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "mf4x8k99k",
+              "a": "p4",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mrbljp6kk",
+              "a": "p3",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "moy6diuf6",
+              "a": "p6",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p6"
+            }
+          ]
+        },
+        {
+          "id": "e8ar3ciaf",
+          "date": "2026-10-21",
+          "playerIds": [
+            "p1",
+            "p5",
+            "p10",
+            "p6",
+            "p0",
+            "p3"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "mp8c162qp",
+              "a": "p3",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "m82klzxbt",
+              "a": "p1",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mxbp62fey",
+              "a": "p6",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "mj4x9fu79",
+              "a": "p5",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p5"
+            },
+            {
+              "id": "mdusoa527",
+              "a": "p3",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "m040dyo53",
+              "a": "p0",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mqpq3tiu1",
+              "a": "p10",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "m8i5jkm74",
+              "a": "p0",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mshhrjycm",
+              "a": "p3",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "mpo006r9l",
+              "a": "p0",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mqf8ipkih",
+              "a": "p6",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "ms2pyqq0k",
+              "a": "p3",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "mlmeo4mtz",
+              "a": "p10",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "m1kmxsvs4",
+              "a": "p3",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "mz8rxichy",
+              "a": "p6",
+              "b": "p5",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p6"
+            }
+          ]
+        },
+        {
+          "id": "eji01ahgz",
+          "date": "2026-10-30",
+          "playerIds": [
+            "p4",
+            "p1",
+            "p6",
+            "p0",
+            "p3"
+          ],
+          "mode": "live",
+          "rounds": [
+            {
+              "number": 1,
+              "matches": [
+                {
+                  "id": "mbxddxyim",
+                  "a": "p4",
+                  "b": "p3",
+                  "winner": "p3",
+                  "legsA": 1,
+                  "legsB": 2,
+                  "status": "played"
+                },
+                {
+                  "id": "mi8tai4yp",
+                  "a": "p6",
+                  "b": "p1",
+                  "winner": "p6",
+                  "legsA": 2,
+                  "legsB": 0,
+                  "status": "played"
+                }
+              ],
+              "bye": "p0"
+            },
+            {
+              "number": 2,
+              "matches": [
+                {
+                  "id": "ml1biqbo1",
+                  "a": "p3",
+                  "b": "p6",
+                  "winner": "p3",
+                  "legsA": 2,
+                  "legsB": 0,
+                  "status": "played"
+                },
+                {
+                  "id": "m7muy07jg",
+                  "a": "p0",
+                  "b": "p1",
+                  "winner": "p1",
+                  "legsA": 0,
+                  "legsB": 2,
+                  "status": "played"
+                }
+              ],
+              "bye": "p4"
+            },
+            {
+              "number": 3,
+              "matches": [
+                {
+                  "id": "mya8op58v",
+                  "a": "p3",
+                  "b": "p6",
+                  "winner": "p3",
+                  "legsA": 2,
+                  "legsB": 0,
+                  "status": "played"
+                },
+                {
+                  "id": "mnklywemg",
+                  "a": "p4",
+                  "b": "p0",
+                  "winner": "p4",
+                  "legsA": 2,
+                  "legsB": 0,
+                  "status": "played"
+                }
+              ],
+              "bye": "p1"
+            },
+            {
+              "number": 4,
+              "matches": [
+                {
+                  "id": "ml0h4oveu",
+                  "a": "p3",
+                  "b": "p4",
+                  "winner": "p4",
+                  "legsA": 1,
+                  "legsB": 2,
+                  "status": "played"
+                },
+                {
+                  "id": "mholo2f6c",
+                  "a": "p1",
+                  "b": "p0",
+                  "winner": "p0",
+                  "legsA": 0,
+                  "legsB": 2,
+                  "status": "played"
+                }
+              ],
+              "bye": "p6"
+            },
+            {
+              "number": 5,
+              "matches": [
+                {
+                  "id": "m9fphgw9g",
+                  "a": "p4",
+                  "b": "p0",
+                  "winner": "p0",
+                  "legsA": 1,
+                  "legsB": 2,
+                  "status": "played"
+                },
+                {
+                  "id": "meucknhn4",
+                  "a": "p6",
+                  "b": "p1",
+                  "winner": "p1",
+                  "legsA": 1,
+                  "legsB": 2,
+                  "status": "played"
+                }
+              ],
+              "bye": "p3"
+            },
+            {
+              "number": 6,
+              "matches": [
+                {
+                  "id": "mf3t6lprr",
+                  "a": "p3",
+                  "b": "p4",
+                  "winner": "p3",
+                  "legsA": 2,
+                  "legsB": 1,
+                  "status": "played"
+                },
+                {
+                  "id": "m47u8ju0r",
+                  "a": "p1",
+                  "b": "p6",
+                  "winner": "p1",
+                  "legsA": 2,
+                  "legsB": 1,
+                  "status": "played"
+                }
+              ],
+              "bye": "p0"
+            },
+            {
+              "number": 7,
+              "matches": [
+                {
+                  "id": "m75kdjyfc",
+                  "a": "p3",
+                  "b": "p1",
+                  "winner": "p3",
+                  "legsA": 2,
+                  "legsB": 0,
+                  "status": "played"
+                },
+                {
+                  "id": "m3zc4c0pw",
+                  "a": "p0",
+                  "b": "p6",
+                  "winner": "p0",
+                  "legsA": 2,
+                  "legsB": 0,
+                  "status": "played"
+                }
+              ],
+              "bye": "p4"
+            },
+            {
+              "number": 8,
+              "matches": [
+                {
+                  "id": "mcgd98kwp",
+                  "a": "p3",
+                  "b": "p0",
+                  "winner": "p3",
+                  "legsA": 2,
+                  "legsB": 0,
+                  "status": "played"
+                },
+                {
+                  "id": "mx03m53d6",
+                  "a": "p4",
+                  "b": "p6",
+                  "winner": "p4",
+                  "legsA": 2,
+                  "legsB": 0,
+                  "status": "played"
+                }
+              ],
+              "bye": "p1"
+            },
+            {
+              "number": 9,
+              "matches": [
+                {
+                  "id": "man1kk80x",
+                  "a": "p4",
+                  "b": "p0",
+                  "winner": "p0",
+                  "legsA": 0,
+                  "legsB": 2,
+                  "status": "played"
+                },
+                {
+                  "id": "mnzau97xf",
+                  "a": "p1",
+                  "b": "p6",
+                  "winner": "p1",
+                  "legsA": 2,
+                  "legsB": 1,
+                  "status": "played"
+                }
+              ],
+              "bye": "p3"
+            },
+            {
+              "number": 10,
+              "matches": [
+                {
+                  "id": "m4tixl2cc",
+                  "a": "p3",
+                  "b": "p0",
+                  "winner": "p0",
+                  "legsA": 0,
+                  "legsB": 2,
+                  "status": "played"
+                },
+                {
+                  "id": "mqshzaa83",
+                  "a": "p1",
+                  "b": "p4",
+                  "winner": "p1",
+                  "legsA": 2,
+                  "legsB": 1,
+                  "status": "played"
+                }
+              ],
+              "bye": "p6"
+            }
+          ],
+          "matches": []
+        }
+      ]
+    },
+    {
+      "id": "swc30bd82",
+      "name": "Saison 1",
+      "events": [
+        {
+          "id": "ey8u2uzjx",
+          "date": "2026-03-04",
+          "playerIds": [
+            "p0",
+            "p1",
+            "p7",
+            "p10"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "mc9hnoe2x",
+              "a": "p10",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "mdkn87y4i",
+              "a": "p0",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mu84py6i8",
+              "a": "p1",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "m7d6npe7p",
+              "a": "p10",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "mcqleqtgm",
+              "a": "p0",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "m043jvdut",
+              "a": "p10",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "mmkuii04m",
+              "a": "p7",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p7"
+            },
+            {
+              "id": "mzad7c03q",
+              "a": "p0",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "mnsr5nnt5",
+              "a": "p1",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mq5qbdoim",
+              "a": "p0",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "meeu6l05a",
+              "a": "p0",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mshm68gq2",
+              "a": "p10",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            }
+          ]
+        },
+        {
+          "id": "ezammjudm",
+          "date": "2026-03-16",
+          "playerIds": [
+            "p1",
+            "p3",
+            "p10",
+            "p7",
+            "p0",
+            "p4"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "mvot8ytsq",
+              "a": "p1",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mpdg9gyyd",
+              "a": "p10",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "mv6ksud0s",
+              "a": "p0",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "mncia5tn6",
+              "a": "p4",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "ml2ow95pf",
+              "a": "p7",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p7"
+            },
+            {
+              "id": "mzbiam5m5",
+              "a": "p4",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "m5xv58u56",
+              "a": "p3",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "m8598hv4u",
+              "a": "p4",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mu7fafgx7",
+              "a": "p0",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mp70siqbi",
+              "a": "p10",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "mehqe69jc",
+              "a": "p4",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "m6x10nkhr",
+              "a": "p1",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "m0509p5ic",
+              "a": "p4",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p4"
+            },
+            {
+              "id": "mnj0a4995",
+              "a": "p1",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "miffg5lbu",
+              "a": "p10",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            }
+          ]
+        },
+        {
+          "id": "equkimmnd",
+          "date": "2026-03-24",
+          "playerIds": [
+            "p1",
+            "p10",
+            "p6",
+            "p0",
+            "p3"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "m985j13ze",
+              "a": "p3",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "m6sf6nopq",
+              "a": "p1",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mi10yrgj9",
+              "a": "p0",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mek0fqotk",
+              "a": "p1",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "m7j0ch401",
+              "a": "p10",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "mumnbsaj8",
+              "a": "p0",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mxahwflej",
+              "a": "p3",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "mmfs146dp",
+              "a": "p10",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "mezeg4kbj",
+              "a": "p6",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "m499dai2k",
+              "a": "p0",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "m36on1u9v",
+              "a": "p10",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "mjxowsswf",
+              "a": "p1",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p1"
+            },
+            {
+              "id": "mj281fmqb",
+              "a": "p0",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mc5pgxwlc",
+              "a": "p0",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "m8wbq4g5u",
+              "a": "p10",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "m93usd17b",
+              "a": "p1",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p1"
+            },
+            {
+              "id": "m133z3w85",
+              "a": "p0",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            }
+          ]
+        },
+        {
+          "id": "egafwwovt",
+          "date": "2026-03-30",
+          "playerIds": [
+            "p2",
+            "p1",
+            "p10",
+            "p7",
+            "p6",
+            "p0"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "mk8gqxkl6",
+              "a": "p1",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mir8qlyrq",
+              "a": "p10",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "mkj8rw96y",
+              "a": "p7",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p7"
+            },
+            {
+              "id": "mzhw9v5mj",
+              "a": "p1",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mrj9f4tkg",
+              "a": "p6",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p6"
+            },
+            {
+              "id": "mo48yqxn2",
+              "a": "p10",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p10"
+            },
+            {
+              "id": "msmoeaijm",
+              "a": "p1",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p1"
+            },
+            {
+              "id": "m4misba1y",
+              "a": "p10",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "mzlnntjz7",
+              "a": "p0",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mc4828od9",
+              "a": "p1",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "m5na8unsq",
+              "a": "p0",
+              "b": "p2",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "mtcyzlno3",
+              "a": "p10",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "m59b89h79",
+              "a": "p1",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p1"
+            },
+            {
+              "id": "m3zz8e7o8",
+              "a": "p6",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p6"
+            },
+            {
+              "id": "mjpno7jbi",
+              "a": "p2",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p2"
+            }
+          ]
+        },
+        {
+          "id": "e4j8qxroh",
+          "date": "2026-04-14",
+          "playerIds": [
+            "p1",
+            "p10",
+            "p7",
+            "p6",
+            "p0",
+            "p3"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "mx7d18pzh",
+              "a": "p1",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mtsw6i384",
+              "a": "p0",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "m539jggvp",
+              "a": "p3",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "m6j8s5vhj",
+              "a": "p1",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mn8erp3jc",
+              "a": "p3",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "myosa8nu0",
+              "a": "p6",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "ms9471va3",
+              "a": "p3",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "m3undeswl",
+              "a": "p1",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p1"
+            },
+            {
+              "id": "mtui2mej5",
+              "a": "p6",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "mhp0wnspw",
+              "a": "p0",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mp3wgs2hd",
+              "a": "p10",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "mpkhnx1o1",
+              "a": "p1",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mltb5ajc1",
+              "a": "p0",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mxxl9ylt2",
+              "a": "p6",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p6"
+            },
+            {
+              "id": "m9vxhe3ya",
+              "a": "p7",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p7"
+            }
+          ]
+        },
+        {
+          "id": "e95bp085a",
+          "date": "2026-04-22",
+          "playerIds": [
+            "p4",
+            "p1",
+            "p10",
+            "p6",
+            "p0",
+            "p3"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "mw53rpnw8",
+              "a": "p4",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mt2gggf6a",
+              "a": "p6",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p6"
+            },
+            {
+              "id": "mlgsg86t6",
+              "a": "p3",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "mw1izvgg6",
+              "a": "p0",
+              "b": "p4",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "m4wcqjhyu",
+              "a": "p3",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "mwnp5wwlk",
+              "a": "p1",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mu1zja5o5",
+              "a": "p3",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "mq7r2hqmf",
+              "a": "p4",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mp5g3q62d",
+              "a": "p1",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mxyyjfpp4",
+              "a": "p0",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "m32ppsl6l",
+              "a": "p4",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "m5155t0lf",
+              "a": "p10",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p10"
+            },
+            {
+              "id": "mqgob32gk",
+              "a": "p0",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mgunei262",
+              "a": "p4",
+              "b": "p10",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "m4jo3gdsl",
+              "a": "p1",
+              "b": "p6",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p1"
+            }
+          ]
+        },
+        {
+          "id": "e700vmx9g",
+          "date": "2026-07-04",
+          "playerIds": [
+            "p4",
+            "p1",
+            "p7",
+            "p0",
+            "p3"
+          ],
+          "mode": "history",
+          "rounds": [],
+          "matches": [
+            {
+              "id": "m46kptqw1",
+              "a": "p1",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mnmzcpu27",
+              "a": "p3",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "m5urcskzz",
+              "a": "p0",
+              "b": "p4",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p0"
+            },
+            {
+              "id": "mkiwbx8zn",
+              "a": "p3",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "mrl6kd2wu",
+              "a": "p4",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mha3hpnhi",
+              "a": "p0",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mpeyrozns",
+              "a": "p1",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p1"
+            },
+            {
+              "id": "mcz9ijfme",
+              "a": "p4",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "muptbevw8",
+              "a": "p0",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "m3ustl1r5",
+              "a": "p4",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mg247632u",
+              "a": "p0",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mtykxi0rr",
+              "a": "p3",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "mz17b1ke5",
+              "a": "p4",
+              "b": "p0",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "mo2upa87t",
+              "a": "p3",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p3"
+            },
+            {
+              "id": "m819e7uy2",
+              "a": "p4",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            },
+            {
+              "id": "m7jc7ota8",
+              "a": "p0",
+              "b": "p3",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "mz3hb8t5m",
+              "a": "p1",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p1"
+            },
+            {
+              "id": "mgv1fq3op",
+              "a": "p3",
+              "b": "p4",
+              "legsA": 2,
+              "legsB": 1,
+              "winner": "p3"
+            },
+            {
+              "id": "mlq29b6kl",
+              "a": "p0",
+              "b": "p7",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p0"
+            },
+            {
+              "id": "m2uegimx0",
+              "a": "p4",
+              "b": "p1",
+              "legsA": 2,
+              "legsB": 0,
+              "winner": "p4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "activeSeasonId": "seaoke3lk",
+  "selectedEventId": "eji01ahgz"
+}
